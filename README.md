@@ -193,7 +193,6 @@ python aegis/adk_server.py
 # Access interfaces:
 # 🔗 ADK Interface: http://localhost:4001
 # 📺 Security Dashboard: http://localhost:4001/video
-# 📚 API Documentation: http://localhost:4001/docs
 ```
 
 ### **Option 3: VicLab Vision Tools Demo**
