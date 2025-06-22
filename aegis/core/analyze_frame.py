@@ -19,7 +19,7 @@ from typing import Dict, List, Any, Optional
 
 # Try to import VLM processor - make it optional for ADK deployment
 try:
-    # Add VicLab to path if available
+    # Add viclab to path if available
     from viclab.video.realtime_video import SmolVLMRealtimeProcessor
     VLM_AVAILABLE = True
 except ImportError:

@@ -165,12 +165,12 @@ Seed-VL-1.5: ⭐⭐⭐⭐⭐   (Excellent detailed analysis)
 - ✅ Local processing only
 
 **OWLv2 Enhancement:**
-- 📦 Requires VicLab package
+- 📦 Requires viclab package
 - 📦 Requires SAM model checkpoint
 - 🔧 GPU recommended for best performance
 
 **Seed-VL-1.5 pro Enhancement:**
-- 📦 Requires VicLab package  
+- 📦 Requires viclab package  
 - 🌐 Requires API access to Doubao service
 - 🔑 Requires API key configuration
 
@@ -229,7 +229,7 @@ The new method parameters are optional and default to the original fast methods.
 
 ### Common Issues
 
-1. **OWLv2 not available:** Install VicLab dependencies
+1. **OWLv2 not available:** Install viclab dependencies
 2. **Seed-VL-1.5 pro not available:** Configure API access
 3. **Slow performance:** Check GPU availability and model loading
 4. **Memory issues:** Monitor resource usage with accurate methods

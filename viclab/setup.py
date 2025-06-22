@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 setup(
     name="viclab",
     version="0.1.0",
-    description="VicLab: Video & Voice Intelligence Center. Common tools for video analysis and voice generation.",
+    description="viclab: Video & Voice Intelligence Center. Common tools for video analysis and voice generation.",
     author="Harry Li",
     author_email="hal212@ucsd.edu",
-    url="https://github.com/haoyangli16/VicLab",
+    url="https://github.com/haoyangli16/viclab",
     # packages=find_packages(),
     # include = ["viclab*", "viclab/*"],
     install_requires=[

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "viclab"
 version = "0.1.0"
-description = "VicLab: Video & Voice Intelligence Center. Common tools for video analysis and voice generation."
+description = "viclab: Video & Voice Intelligence Center. Common tools for video analysis and voice generation."
 authors = [
     { name = "Harry Li", email = "hal212@ucsd.edu" }
 ]
@@ -96,4 +96,4 @@ ignore = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/haoyangli16/VicLab" 
+"Homepage" = "https://github.com/haoyangli16/viclab" 

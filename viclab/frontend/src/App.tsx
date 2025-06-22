@@ -389,7 +389,7 @@ export default function App() {
   return (
     <div className="app-container">
       <h1 className="app-title">
-        VicLab Real-time Video Analysis
+        viclab Real-time Video Analysis
       </h1>
 
       {/* Error Display */}

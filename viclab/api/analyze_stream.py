@@ -15,7 +15,7 @@ import glob
 from PIL import Image
 import io
 
-# Add the VicLab package to the path
+# Add the viclab package to the path
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "viclab"))
 
 try:

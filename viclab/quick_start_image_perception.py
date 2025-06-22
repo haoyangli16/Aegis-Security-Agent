@@ -7,8 +7,8 @@ Simple examples to get you started with image perception tasks.
 import os
 import sys
 
-# Add the VicLab package to the path
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "thirdparty", "VicLab"))
+# Add the viclab package to the path
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "thirdparty", "viclab"))
 
 from viclab.image.perception import Dou2DTools
 

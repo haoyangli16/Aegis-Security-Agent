@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 """
-VicLab Image Perception Module
+viclab Image Perception Module
 
 This module provides comprehensive image perception capabilities using the Seed-1.5-VL Pro model.
 """

@@ -6,7 +6,7 @@ from uuid import uuid4
 import logging
 from typing import Optional
 
-# Add the VicLab package to the path
+# Add the viclab package to the path
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "viclab"))
 
 try:

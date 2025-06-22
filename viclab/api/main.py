@@ -17,7 +17,7 @@ except ImportError as e:
     raise
 
 app = FastAPI(
-    title="VicLab Real-time Video Analysis API",
+    title="viclab Real-time Video Analysis API",
     description="API for real-time video analysis using SmolVLM",
     version="1.0.0"
 )
@@ -38,7 +38,7 @@ app.include_router(upload_router, prefix="/api", tags=["upload"])
 @app.get("/")
 async def root():
     return {
-        "message": "VicLab Real-time Video Analysis API",
+        "message": "viclab Real-time Video Analysis API",
         "status": "running",
         "docs": "/docs"
     }
@@ -50,16 +50,16 @@ async def health_check():
 # Startup event
 @app.on_event("startup")
 async def startup_event():
-    logger.info("🚀 VicLab API is starting up...")
+    logger.info("🚀 viclab API is starting up...")
     
     # Create necessary directories
     os.makedirs("temp", exist_ok=True)
     logger.info("📁 Directories created")
     
-    logger.info("✅ VicLab API startup completed successfully")
+    logger.info("✅ viclab API startup completed successfully")
 
 # Shutdown event  
 @app.on_event("shutdown")
 async def shutdown_event():
-    logger.info("🛑 VicLab API is shutting down...")
-    logger.info("✅ VicLab API shutdown completed")
+    logger.info("🛑 viclab API is shutting down...")
+    logger.info("✅ viclab API shutdown completed")

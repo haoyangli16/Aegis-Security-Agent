@@ -8,9 +8,9 @@ import os
 import sys
 import numpy as np
 
-# Add the VicLab package to the path
-# This assumes the script is run from the 'VicLab' directory
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", "thirdparty", "VicLab"))
+# Add the viclab package to the path
+# This assumes the script is run from the 'viclab' directory
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "thirdparty", "viclab"))
 
 from viclab.image.det_seg import OwlV2SAM
 

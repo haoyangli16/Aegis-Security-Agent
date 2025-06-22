@@ -8,7 +8,7 @@ import os
 import sys
 import time
 
-# Add the VicLab package to the path if needed
+# Add the viclab package to the path if needed
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "viclab"))
 
 from viclab.video.realtime_video import SmolVLMRealtimeProcessor

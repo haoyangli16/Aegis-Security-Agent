@@ -1,4 +1,4 @@
-# VicLab Real-time Video Analysis Demo
+# viclab Real-time Video Analysis Demo
 
 A complete real-time video analysis system with SmolVLM integration, featuring a FastAPI backend and React frontend.
 
@@ -8,7 +8,7 @@ A complete real-time video analysis system with SmolVLM integration, featuring a
 
 1. **Install Python dependencies:**
    ```bash
-   cd VicLab
+   cd viclab
    pip install -r requirements.txt
    ```
 
@@ -157,7 +157,7 @@ curl -X POST http://localhost:8000/api/stop-stream
 ## 📁 Project Structure
 
 ```
-VicLab/
+viclab/
 ├── api/                          # FastAPI backend
 │   ├── main.py                   # Main API app
 │   ├── analyze_stream.py         # Video analysis endpoints
@@ -167,7 +167,7 @@ VicLab/
 │   │   ├── App.tsx              # Main React component
 │   │   └── ...
 │   └── package.json
-├── viclab/                      # Core VicLab library
+├── viclab/                      # Core viclab library
 │   └── video/
 │       └── realtime_video.py    # SmolVLM processor
 ├── requirements.txt             # Python dependencies

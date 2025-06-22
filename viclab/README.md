@@ -1,6 +1,6 @@
-# VicLab
+# viclab
 
-**VicLab** (Video & Voice Intelligence Center, or "Victory" Lab) is a toolkit for common video analysis and voice generation tasks.
+**viclab** (Video & Voice Intelligence Center, or "Victory" Lab) is a toolkit for common video analysis and voice generation tasks.
 
 ## Features
 
@@ -13,8 +13,8 @@
 
 1. **Clone the repo:**
    ```sh
-   git clone https://github.com/haoyangli16/VicLab.git
-   cd VicLab/viclab
+   git clone https://github.com/haoyangli16/viclab.git
+   cd viclab/viclab
    ```
 
 2. **Install as a package:**
@@ -54,4 +54,4 @@
 
 ---
 
-*VicLab: Video, Voice, Victory!* 
+*viclab: Video, Voice, Victory!* 

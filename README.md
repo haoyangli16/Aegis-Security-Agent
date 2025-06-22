@@ -21,8 +21,9 @@ AEGIS (AI Enhanced Guardian Intelligence System) represents a paradigm shift in 
 - **Enterprise Scalability**: Modular architecture supporting unlimited camera feeds
 - **Zero-Touch Operation**: Autonomous incident detection, logging, and escalation
 
----
+![AI Security Pipeline](pipeline/brief_pipeline.png)
 
+---
 ## 🚀 Core Capabilities
 
 ### 🎯 Advanced AI Vision Pipeline
@@ -60,7 +61,7 @@ AEGIS (AI Enhanced Guardian Intelligence System) represents a paradigm shift in 
 │  ├─ Camera Control & Management                                 │
 │  └─ Incident Logging & Evidence Capture                         │
 ├─────────────────────────────────────────────────────────────────┤
-│  📹 VicLab Vision Framework                                     │
+│  📹 viclab Vision Framework                                     │
 │  ├─ Multi-Modal Processors                                      │
 │  ├─ Real-Time Video Analysis                                    │
 │  ├─ Image Perception Tools                                      │
@@ -76,7 +77,7 @@ AEGIS (AI Enhanced Guardian Intelligence System) represents a paradigm shift in 
 
 ### Component Overview
 
-#### **1. VicLab Vision Framework**
+#### **1. viclab Vision Framework**
 High-performance computer vision library providing:
 - Multi-modal video/image analysis
 - Real-time streaming processors
@@ -128,9 +129,9 @@ git clone <repository-url>
 cd aegis_security_copilot
 ```
 
-### **Step 2: Install VicLab Vision Framework**
+### **Step 2: Install viclab Vision Framework**
 ```bash
-cd VicLab
+cd viclab
 pip install -r requirements.txt
 pip install -e .
 
@@ -163,8 +164,8 @@ export GOOGLE_GENAI_USE_VERTEXAI="False"
 
 ### **Step 4: Verify Installation**
 ```bash
-# Test VicLab installation
-python -c "from viclab.image import Dou2DTools; print('VicLab: ✅')"
+# Test viclab installation
+python -c "from viclab.image import Dou2DTools; print('viclab: ✅')"
 
 # Test AEGIS installation  
 python -c "from aegis.aegis_agent import create_aegis_agent; print('AEGIS: ✅')"
@@ -195,9 +196,9 @@ python aegis/adk_server.py
 # 📺 Security Dashboard: http://localhost:4001/video
 ```
 
-### **Option 3: VicLab Vision Tools Demo**
+### **Option 3: viclab Vision Tools Demo**
 ```bash
-cd VicLab
+cd viclab
 
 # Image perception examples
 python quick_start_image_perception.py
@@ -215,7 +216,7 @@ python quick_start_det_seg.py
 
 ```
 aegis_security_copilot/
-├── 📁 VicLab/                          # Vision Framework Library
+├── 📁 viclab/                          # Vision Framework Library
 │   ├── 📁 viclab/                      # Core vision modules
 │   │   ├── 📁 image/                   # Image perception tools
 │   │   │   ├── perception.py           # Dou2DTools class
@@ -227,7 +228,7 @@ aegis_security_copilot/
 │   │   └── 📁 voice/                   # Audio processing
 │   ├── 📁 api/                         # FastAPI backend
 │   ├── 📁 frontend/                    # React frontend
-│   └── requirements.txt               # VicLab dependencies
+│   └── requirements.txt               # viclab dependencies
 ├── 📁 aegis/                          # Security Platform
 │   ├── 📁 aegis_agent/                # ADK agent implementation
 │   │   ├── agent.py                   # Main security agent
@@ -281,7 +282,7 @@ aegis_security_copilot/
 "Generate incident report for lobby disturbance"
 ```
 
-### **VicLab Vision API**
+### **viclab Vision API**
 
 ```python
 from viclab.image import Dou2DTools

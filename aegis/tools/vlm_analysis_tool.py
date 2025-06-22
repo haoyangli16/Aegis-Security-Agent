@@ -27,7 +27,7 @@ except ImportError as e:
 
 # Try to import Seed-VL-1.5 pro (ComplexVideoUnderstander)
 try:
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../VicLab")))
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../viclab")))
     from viclab.video.doubao_video import ComplexVideoUnderstander
     SEEDVL_AVAILABLE = True
     print("✅ Seed-VL-1.5 pro analysis available")

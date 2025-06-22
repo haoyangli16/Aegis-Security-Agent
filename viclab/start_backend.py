@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Startup script for the VicLab Real-time Video Analysis API
+Startup script for the viclab Real-time Video Analysis API
 """
 
 import os
@@ -8,7 +8,7 @@ import sys
 import subprocess
 import logging
 
-# Add the VicLab package to the path
+# Add the viclab package to the path
 sys.path.append(os.path.join(os.path.dirname(__file__), "viclab"))
 
 def check_dependencies():
@@ -28,7 +28,7 @@ def check_dependencies():
 
 def start_server():
     """Start the FastAPI server."""
-    print("🚀 Starting VicLab Real-time Video Analysis API...")
+    print("🚀 Starting viclab Real-time Video Analysis API...")
     print("📡 Server will be available at: http://localhost:8000")
     print("📖 API docs will be available at: http://localhost:8000/docs")
     print("🛑 Press Ctrl+C to stop the server")

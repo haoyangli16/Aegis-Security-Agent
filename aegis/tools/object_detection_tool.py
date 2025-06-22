@@ -23,7 +23,7 @@ from aegis.core.security_context import get_security_context
 # Try to import OWLv2 dependencies
 try:
     sys.path.append(
-        os.path.abspath(os.path.join(os.path.dirname(__file__), "../../VicLab"))
+        os.path.abspath(os.path.join(os.path.dirname(__file__), "../../viclab"))
     )
     from viclab.image.det_seg import OwlV2SAM
 
@@ -246,7 +246,7 @@ def _detect_with_owlv2(frame: np.ndarray, object_list: List[str]) -> tuple:
             print("Initializing OWLv2 detector...")
             sam_checkpoint = os.path.join(
                 os.path.dirname(__file__),
-                "../../VicLab/viclab/image/checkpoints/sam_vit_h_4b8939.pth",
+                "../../viclab/viclab/image/checkpoints/sam_vit_h_4b8939.pth",
             )
             owlv2_detector = OwlV2SAM(sam_checkpoint=sam_checkpoint)
             print("✅ OWLv2 detector initialized")
