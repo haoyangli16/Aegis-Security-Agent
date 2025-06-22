@@ -1,0 +1,280 @@
+/* Simple CSS for VicLab Real-time Video Analysis */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fbbf24;
+  margin-bottom: 2.5rem;
+}
+
+.error-message {
+  background-color: #7f1d1d;
+  border: 1px solid #dc2626;
+  color: #fecaca;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-element {
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 4px solid #fbbf24;
+}
+
+.video-caption {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.stream-controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-start-stream {
+  background-color: #059669;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-start-stream:hover {
+  background-color: #047857;
+}
+
+.btn-stop-stream {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-stop-stream:hover {
+  background-color: #b91c1c;
+}
+
+.stream-status {
+  margin-top: 1rem;
+  background-color: #27272a;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.stream-status h3 {
+  color: #fde047;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.capture-controls {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #27272a;
+  border-radius: 0.375rem;
+  border: 1px solid #52525b;
+}
+
+.capture-interval-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.interval-select {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #52525b;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.interval-select:hover {
+  border-color: #fbbf24;
+}
+
+.interval-select:focus {
+  outline: none;
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+}
+
+.fps-display {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.active-indicator {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.input-field {
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #27272a;
+  color: #ffffff;
+  border: 1px solid #52525b;
+  width: 100%;
+}
+
+.input-field:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-analyze {
+  background-color: #eab308;
+  color: #000000;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-analyze:hover:not(:disabled) {
+  background-color: #ca8a04;
+}
+
+.btn-analyze:disabled {
+  background-color: #4b5563;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-analyze-buffer {
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-analyze-buffer:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.btn-analyze-buffer:disabled {
+  background-color: #4b5563;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.results-section {
+  margin-top: 1.5rem;
+}
+
+.results-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fde047;
+}
+
+.results-box {
+  background-color: #111827;
+  color: #10b981;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  min-height: 100px;
+}
+
+.instructions-section {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.instructions-title {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.instructions-list {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+

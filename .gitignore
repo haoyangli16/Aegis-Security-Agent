@@ -1,0 +1,76 @@
+# Python bytecode and cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.whl
+*.npy
+*.pkl
+*.pt
+*.pth
+
+# Jupyter and VSCode
+*.ipynb_checkpoints/
+.vscode/
+*.vscode*
+
+# OS/System files
+.DS_Store
+*.swp
+*.swo
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+
+# Env and virtualenv
+.env
+.env.*
+.venv/
+
+# Node/npm
+node_modules/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+.eggs/
+.cache/
+
+# Media files
+*.mp4
+*.wav
+*.mp3
+*.m4a
+*.webm
+*.ogg
+
+# Data / DB files
+*.sqlite3
+*.db
+
+# Custom/project-specific
+.cursor
+*feh_*
+
+# Project directories to ignore
+alert_frames/
+temp/
+orchestrator/__pycache__/
+aegis/*.jpg
+aegis/test/
+aegis/*.pt
+test/
+backup/
+adk-python/
+adk-java/
+viclab/viclab/image/checkpoints/
+viclab/samples/
+viclab/results/
+
+# Misc
+ARCHITECTURE_DOCUMENTATION.md
