@@ -395,8 +395,7 @@ black . && isort .
 ## 📞 Support & Contact
 
 For enterprise inquiries, technical support, or partnership opportunities:
-
-- **Technical Documentation**: [docs/](docs/)
+<!-- - **Technical Documentation**: [docs/](docs/) -->
 - **API Reference**: [http://localhost:4001/docs](http://localhost:4001/docs)
 - **Issues**: [GitHub Issues](https://github.com/your-org/aegis-security/issues)
 
