@@ -402,6 +402,6 @@ For enterprise inquiries, technical support, or partnership opportunities:
 
 ---
 
-**Built for Google ADK Competition 2024 | Powered by Gemini 2.0 Flash & Advanced Computer Vision**
+**Built for Google ADK Competition 2025 | Powered by Gemini 2.0 Flash & Advanced Computer Vision**
 
 *Protecting what matters most through intelligent AI surveillance.* 
