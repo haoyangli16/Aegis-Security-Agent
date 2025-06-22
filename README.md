@@ -398,7 +398,7 @@ For enterprise inquiries, technical support, or partnership opportunities:
 <!-- - **Technical Documentation**: [docs/](docs/) -->
 <!-- - **API Reference**: [http://localhost:4001/docs](http://localhost:4001/docs) -->
 - **Issues**: [GitHub Issues](https://github.com/haoyangli16/Aegis-Security-Agent/issues)
-- **Email**: [Email](hal212@ucsd.edu)
+- **Email**: hal212@ucsd.edu
 
 ---
 
