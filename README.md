@@ -386,7 +386,7 @@ black . && isort .
   title={AEGIS: AI Enhanced Guardian Intelligence System},
   author={Security AI Team},
   year={2024},
-  url={https://github.com/your-org/aegis-security}
+  url={https://github.com/haoyangli16/Aegis-Security-Agent}
 }
 ```
 
