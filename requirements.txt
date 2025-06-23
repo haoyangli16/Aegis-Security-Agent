@@ -1,18 +1,76 @@
-# Google ADK Core
-google-adk
+# AEGIS Security Co-Pilot - Essential Requirements
+# Heavy ML packages are installed separately in Dockerfile
 
-# Computer Vision & AI
-ultralytics
-opencv-python
-Pillow
-# Audio Processing
-faster-whisper
-soundfile
+# Google ADK and Cloud Services (Core)
+google-adk==1.3.0
+google-api-core==2.25.1
+google-api-python-client==2.172.0
+google-auth==2.40.3
+google-auth-httplib2==0.2.0
+google-cloud-aiplatform==1.97.0
+google-cloud-core==2.4.3
+google-cloud-logging==3.12.1
+google-cloud-secret-manager==2.24.0
+google-cloud-speech==2.33.0
+google-cloud-storage==2.19.0
+google-genai==1.20.0
+google-crc32c==1.7.1
+google-resumable-media==2.7.2
+googleapis-common-protos==1.70.0
 
-# Development & Testing
-pytest
-black
-flake8
+# Web Framework (Essential)
+fastapi==0.115.12
+uvicorn==0.34.3
+starlette==0.46.2
+pydantic==2.11.5
+pydantic-settings==2.9.1
+python-multipart==0.0.20
 
-aiofiles
+# Core Computer Vision (Lightweight)
+opencv-python==4.11.0.86
+pillow==11.0.0
+numpy==1.26.2
 
+# Data Processing (Essential)
+pandas==2.3.0
+requests==2.32.3
+orjson==3.10.18
+
+# Database
+sqlalchemy==2.0.41
+
+# Audio/Speech (Basic)
+faster-whisper==1.1.1
+speechrecognition==3.14.3
+pydub==0.25.1
+
+# Utilities (Core)
+python-dotenv==1.1.0
+coloredlogs==15.0.1
+rich==13.7.1
+click==8.1.8
+tqdm==4.67.1
+packaging==25.0
+
+# Security and Crypto
+cryptography==45.0.4
+
+# Network and async
+aiofiles==23.2.1
+httpx==0.28.1
+websockets==14.2
+
+# MCP and Agent Framework
+mcp==1.9.4
+
+# Configuration and parsing
+pyyaml==6.0.2
+jinja2==3.1.4
+protobuf==6.31.1
+
+# Monitoring
+psutil==7.0.0
+
+# Text processing
+regex==2024.11.6
+tiktoken==0.9.0

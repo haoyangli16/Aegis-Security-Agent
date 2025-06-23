@@ -74,3 +74,10 @@ viclab/results/
 
 # Misc
 ARCHITECTURE_DOCUMENTATION.md
+
+
+# Deployment directories
+aegis-deployment-*/
+
+requirements-backup.txt
+requirements-vertex-ai.txt

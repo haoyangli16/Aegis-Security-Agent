@@ -37,7 +37,7 @@ logging.getLogger('google_genai').setLevel(logging.ERROR)  # Only show errors fr
 logging.getLogger('httpx').setLevel(logging.WARNING)  # Reduce HTTP request logs
 logging.getLogger('uvicorn.access').setLevel(logging.WARNING)  # Reduce server access logs
 logging.getLogger('aegis.server.web_monitor_server').setLevel(logging.ERROR)  # Reduce supervision logs
-logging.getLogger('aegis.core.security_context').setLevel(logging.ERROR)  # Reduce supervision logs
+# logging.getLogger('aegis.core.security_context').setLevel(logging.ERROR)  # Reduce supervision logs
 
 logger.disabled = True
 

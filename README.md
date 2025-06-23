@@ -21,7 +21,7 @@ AEGIS (AI Enhanced Guardian Intelligence System) represents a paradigm shift in 
 - **Enterprise Scalability**: Modular architecture supporting unlimited camera feeds
 - **Zero-Touch Operation**: Autonomous incident detection, logging, and escalation
 
-![AI Security Pipeline](pipeline/brief_pipeline.png)
+![AI Security Pipeline](pipeline/framework.png)
 
 ---
 ## 🚀 Core Capabilities
