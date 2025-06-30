@@ -9,7 +9,6 @@
 > *Transforming traditional security monitoring into intelligent, proactive security management through advanced AI and natural language interaction.*
 
 ---
-
 ## ⚠️ **Deployment Notice**
 
 **Important**: This repository heavily relies on advanced AI models (YOLO11, OWLv2, SmolVLM, Seed-VL-1.5 Pro) with significant computational requirements, making it **incompatible with Cloud Run** due to initialization timeouts and resource constraints.
@@ -18,23 +17,21 @@
 - ❌ **Cloud Run**: Incompatible due to heavy model loading and GPU requirements
 - ⏳ **Google Kubernetes Engine (GKE)**: No available GPU resources (A100/H100/L4) across multiple regions (us-central, us-west, asia-southeast and so on)
 
-**Available Demo Options**:
-
-  ### 🎯 **[Option 1]: Simplified Demo (main.py)** - *Currently Deployed*
+### **Available Demo Options**:
+#### 🎯 **[Option 1]: Simplified Demo (main.py)** - *Currently Deployed*
   - **Features**: Basic functionality demonstration using Google ADK default UI
   - **Video Sources**: YouTube live streams (no local camera dependencies)
   - **Tools**: Complete security analysis tools without custom visualization UI
   - **Access**: Available through default web interface for conversational interaction
   - **Deployment**: Compatible with Cloud Run (lightweight version)
-
-  ### 🚀 **[Option 2]: Full Platform (main_with_our_ui.py)** - *Infrastructure Dependent*
+#### 🚀 **[Option 2]: Full Platform (main_with_our_ui.py)** - *Infrastructure Dependent*
   - **Features**: Complete AEGIS platform with custom visualization UI
   - **Requirements**: GPU-enabled infrastructure (GKE with available resources)
   - **Deployment**: FastAPI server on Cloud Run (when infrastructure supports)
   - **UI**: Custom detection boxes, real-time video analysis dashboard
 
-![Our Security UI](pipeline/web-cover.png)
-**\*Note**: If GPU resources become available on GKE, the full platform can be deployed immediately with all advanced features enabled.
+[![Watch the video](pipeline/web-cover.png)](https://www.youtube.com/watch?v=DMkqAjT5HVc)
+- **Note**: If GPU resources become available on GKE, the full platform can be deployed immediately with all advanced features enabled.
 
 **Online Demo**: The simplified online web demo click [here](https://aegis-security-agent-533957102585.us-central1.run.app)
 (Link: https://aegis-security-agent-533957102585.us-central1.run.app)
