@@ -8,12 +8,15 @@ WORKDIR /app
 
 # Install system dependencies (minimal for Cloud Run)
 RUN apt-get update && apt-get install -y \
-    curl \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    ffmpeg \
+    libxrender1 \
     git \
     build-essential \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
-
+    && rm -rf /var/lib/apt/lists/*
+    
 # Configure pip for better performance
 ENV PIP_NO_CACHE_DIR=1
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1

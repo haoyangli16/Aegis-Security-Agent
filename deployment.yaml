@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adk-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adk-agent
+  template:
+    metadata:
+      labels:
+        app: adk-agent
+    spec:
+      serviceAccountName: adk-agent-sa
+      nodeSelector:
+        cloud.google.com/gke-nodepool: l4-gpu-pool
+      tolerations:
+      - key: nvidia.com/gpu
+        operator: Exists
+        effect: NoSchedule
+      containers:
+      - name: adk-agent
+        imagePullPolicy: Always
+        image: asia-southeast1-docker.pkg.dev/aegis-prod-001/adk-repo-sg/adk-agent:latest
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+        ports:
+        - containerPort: 8080
+        env:
+          - name: PORT
+            value: "8080"
+          - name: GOOGLE_CLOUD_PROJECT
+            value: "aegis-prod-001"
+          - name: GOOGLE_CLOUD_LOCATION
+            value: "asia-southeast1"
+          - name: GOOGLE_GENAI_USE_VERTEXAI
+            value: "true"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adk-agent
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: adk-agent

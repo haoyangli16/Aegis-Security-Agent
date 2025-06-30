@@ -10,9 +10,40 @@
 
 ---
 
+## ⚠️ **Deployment Notice**
+
+**Important**: This repository heavily relies on advanced AI models (YOLO11, OWLv2, SmolVLM, Seed-VL-1.5 Pro) with significant computational requirements, making it **incompatible with Cloud Run** due to initialization timeouts and resource constraints.
+
+**Current Infrastructure Challenges**:
+- ❌ **Cloud Run**: Incompatible due to heavy model loading and GPU requirements
+- ⏳ **Google Kubernetes Engine (GKE)**: No available GPU resources (A100/H100/L4) across multiple regions (us-central, us-west, asia-southeast and so on)
+
+**Available Demo Options**:
+
+  ### 🎯 **[Option 1]: Simplified Demo (main.py)** - *Currently Deployed*
+  - **Features**: Basic functionality demonstration using Google ADK default UI
+  - **Video Sources**: YouTube live streams (no local camera dependencies)
+  - **Tools**: Complete security analysis tools without custom visualization UI
+  - **Access**: Available through default web interface for conversational interaction
+  - **Deployment**: Compatible with Cloud Run (lightweight version)
+
+  ### 🚀 **[Option 2]: Full Platform (main_with_our_ui.py)** - *Infrastructure Dependent*
+  - **Features**: Complete AEGIS platform with custom visualization UI
+  - **Requirements**: GPU-enabled infrastructure (GKE with available resources)
+  - **Deployment**: FastAPI server on Cloud Run (when infrastructure supports)
+  - **UI**: Custom detection boxes, real-time video analysis dashboard
+
+![Our Security UI](pipeline/web-cover.png)
+**\*Note**: If GPU resources become available on GKE, the full platform can be deployed immediately with all advanced features enabled.
+
+**Online Demo**: The simplified online web demo click [here](https://aegis-security-agent-533957102585.us-central1.run.app)
+(Link: https://aegis-security-agent-533957102585.us-central1.run.app)
+
+---
+
 ## 🌟 Executive Summary
 
-AEGIS (AI Enhanced Guardian Intelligence System) represents a paradigm shift in security monitoring technology. By combining real-time computer vision, large language models, and conversational AI through Google's Agent Development Kit (ADK), AEGIS transforms passive surveillance into an intelligent, responsive security ecosystem.
+**AEGIS** (**A**I **E**nhanced **G**uardian **I**ntelligence **S**ystem) represents a paradigm shift in security monitoring technology. By combining real-time computer vision, large language models, and conversational AI through Google's Agent Development Kit (ADK), **AEGIS** transforms passive surveillance into an intelligent, responsive security ecosystem.
 
 **Key Value Propositions:**
 - **Autonomous Threat Detection**: Real-time AI-powered analysis with 95%+ accuracy
@@ -43,53 +74,6 @@ AEGIS (AI Enhanced Guardian Intelligence System) represents a paradigm shift in 
 - **Threat Level Assessment**: Dynamic risk evaluation with confidence scoring
 - **Audit Trail**: Complete activity logging for compliance and forensics
 - **Dashboard Analytics**: Real-time security metrics and performance monitoring
-
----
-
-## 🏗️ System Architecture
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        AEGIS Security Platform                  │
-├─────────────────────────────────────────────────────────────────┤
-│  🎤 Natural Language Interface (Google ADK + Gemini 2.0 Flash)  │
-├────────────────────────────────────────────────────────────────—┤
-│  🛠️ Security Tools Layer                                        │
-│  ├─ Object Detection (YOLO11/OWLv2)                             │
-│  ├─ Scene Analysis (SmolVLM/Seed-VL-1.5)                        │
-│  ├─ Security Assessment Engine                                  │
-│  ├─ Camera Control & Management                                 │
-│  └─ Incident Logging & Evidence Capture                         │
-├─────────────────────────────────────────────────────────────────┤
-│  📹 viclab Vision Framework                                     │
-│  ├─ Multi-Modal Processors                                      │
-│  ├─ Real-Time Video Analysis                                    │
-│  ├─ Image Perception Tools                                      │
-│  └─ Streaming Video Pipeline                                    │
-├─────────────────────────────────────────────────────────────────┤
-│  🔧 Core Infrastructure                                         │
-│  ├─ FastAPI Web Server                                          │
-│  ├─ WebSocket Streaming                                         │
-│  ├─ SQLite Session Management                                   │
-│  └─ Multi-Threading Pipeline                                    │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### Component Overview
-
-#### **1. viclab Vision Framework**
-High-performance computer vision library providing:
-- Multi-modal video/image analysis
-- Real-time streaming processors
-- Advanced object detection and scene understanding
-- Modular, pip-installable vision tools
-
-#### **2. AEGIS Security Engine**
-Enterprise security platform featuring:
-- Google ADK agent integration
-- Conversational security interface
-- Intelligent tool orchestration
-- Automated incident management
 
 ---
 
@@ -175,7 +159,7 @@ python -c "from aegis.aegis_agent import create_aegis_agent; print('AEGIS: ✅')
 
 ## 🚀 Quick Start Guide
 
-### **Option 1: Interactive Security Agent**
+### **Option 1: Interactive Security Agent CLI**
 ```bash
 # Launch interactive security console
 python run_agent.py
@@ -186,19 +170,25 @@ python run_agent.py
 # "Analyze crowd density at main entrance"
 ```
 
-### **Option 2: Full Web Platform**
+### **Option 2 (Recommand): Full Web Platform**
 ```bash
 # Start complete security platform
-python aegis/adk_server.py
-
-# Access interfaces:
-# 🔗 ADK Interface: http://localhost:4001
-# 📺 Security Dashboard: http://localhost:4001/video
+# go into aegis folder
+cd aegis/
+python adk_server.py
 ```
+#### i. Access interfaces:
+- 📺 **Security Dashboard**: http://localhost:4001/video  (With better visualization)
+- 🔗 ADK Default UI: http://localhost:4001
 
-### **Option 3: viclab Vision Tools Demo**
+#### ii. Abnormal/Warning Behavior Examples:
+![Warning](pipeline/warning-example.png)
+![Abnormal](pipeline/abnormal-example.png)
+
+### **Option 3: Viclab Vision Tools Demo**
 ```bash
-cd viclab
+# backto viclab folder
+cd ../viclab
 
 # Image perception examples
 python quick_start_image_perception.py
@@ -208,6 +198,67 @@ python quick_start_video_analysis.py
 
 # Detection & segmentation examples
 python quick_start_det_seg.py
+```
+
+---
+
+## 💡 Usage Examples
+
+### **Natural Language Security Commands**
+
+```python
+# Threat Detection
+"Scan all cameras for weapons and suspicious packages"
+"Check for unattended bags in the lobby area"
+"Look for aggressive behavior at gate 2"
+
+# Situational Awareness
+"What's the crowd density at the main entrance?"
+"Describe what's happening in camera 3"
+"Assess the current security threat level"
+
+# Camera Management
+"Switch to parking area camera"
+"Show me the gate security feed"
+"List all available camera locations"
+
+# Incident Management
+"Log security incident for suspicious activity in camera 1"
+"Show recent security incidents"
+"Generate incident report for lobby disturbance"
+```
+
+### **VicLab Vision API**
+
+```python
+from viclab.image import Dou2DTools
+
+# Initialize vision processor
+perceptor = Dou2DTools()
+
+# Object detection and counting
+result = perceptor.count_objects("security_feed.jpg", "people")
+print(f"Detected {result['count']} people")
+
+# Scene analysis
+analysis = perceptor.phrase_grounding("camera_feed.jpg", "suspicious packages")
+
+# Text recognition in documents  
+text_regions = perceptor.text_spotting("document.jpg")
+```
+
+### **Video Stream Analysis**
+
+```python
+from viclab.video import SmolVLMRealtimeProcessor
+
+# Real-time video analysis
+processor = SmolVLMRealtimeProcessor()
+processor.process_video_stream(
+    video_source=0,  # Webcam
+    prompt="Detect any security threats or unusual behavior",
+    analysis_interval=3.0
+)
 ```
 
 ---
@@ -247,73 +298,60 @@ aegis_security_copilot/
 │   │   └── settings.py                # System settings
 │   ├── 📁 server/                     # Web server
 │   │   └── web_monitor_server.py      # Video streaming
+│   ├── adk_server.py                  *****[DEMO]-Option 2***** # with full UI
+│   ├── agent.py                       # agent
 │   └── 📁 static/                     # Frontend assets
-├── adk_server.py                      # Main server entry point
-├── run_agent.py                       # Interactive agent
+├── main.py                            # Main server entry point
+├── run_agent.py                       *****[DEMO]-Option 1***** # CLI
 ├── setup.py                          # Package configuration
 └── README.md                         # This file
 ```
-
 ---
 
-## 💡 Usage Examples
+## 🏗️ System Architecture
 
-### **Natural Language Security Commands**
-
-```python
-# Threat Detection
-"Scan all cameras for weapons and suspicious packages"
-"Check for unattended bags in the lobby area"
-"Look for aggressive behavior at gate 2"
-
-# Situational Awareness
-"What's the crowd density at the main entrance?"
-"Describe what's happening in camera 3"
-"Assess the current security threat level"
-
-# Camera Management
-"Switch to parking area camera"
-"Show me the gate security feed"
-"List all available camera locations"
-
-# Incident Management
-"Log security incident for suspicious activity in camera 1"
-"Show recent security incidents"
-"Generate incident report for lobby disturbance"
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        AEGIS Security Platform                  │
+├─────────────────────────────────────────────────────────────────┤
+│  🎤 Natural Language Interface (Google ADK + Gemini 2.0 Flash)  │
+├────────────────────────────────────────────────────────────────—┤
+│  🛠️ Security Tools Layer                                        │
+│  ├─ Object Detection (YOLO11/OWLv2)                             │
+│  ├─ Scene Analysis (SmolVLM/Seed-VL-1.5)                        │
+│  ├─ Security Assessment Engine                                  │
+│  ├─ Camera Control & Management                                 │
+│  └─ Incident Logging & Evidence Capture                         │
+├─────────────────────────────────────────────────────────────────┤
+│  📹 viclab Vision Framework                                     │
+│  ├─ Multi-Modal Processors                                      │
+│  ├─ Real-Time Video Analysis                                    │
+│  ├─ Image Perception Tools                                      │
+│  └─ Streaming Video Pipeline                                    │
+├─────────────────────────────────────────────────────────────────┤
+│  🔧 Core Infrastructure                                         │
+│  ├─ FastAPI Web Server                                          │
+│  ├─ WebSocket Streaming                                         │
+│  ├─ SQLite Session Management                                   │
+│  └─ Multi-Threading Pipeline                                    │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-### **viclab Vision API**
+### Component Overview
 
-```python
-from viclab.image import Dou2DTools
+#### **1. viclab Vision Framework**
+High-performance computer vision library providing:
+- Multi-modal video/image analysis
+- Real-time streaming processors
+- Advanced object detection and scene understanding
+- Modular, pip-installable vision tools
 
-# Initialize vision processor
-perceptor = Dou2DTools()
-
-# Object detection and counting
-result = perceptor.count_objects("security_feed.jpg", "people")
-print(f"Detected {result['count']} people")
-
-# Scene analysis
-analysis = perceptor.phrase_grounding("camera_feed.jpg", "suspicious packages")
-
-# Text recognition in documents  
-text_regions = perceptor.text_spotting("document.jpg")
-```
-
-### **Video Stream Analysis**
-
-```python
-from viclab.video import SmolVLMRealtimeProcessor
-
-# Real-time video analysis
-processor = SmolVLMRealtimeProcessor()
-processor.process_video_stream(
-    video_source=0,  # Webcam
-    prompt="Detect any security threats or unusual behavior",
-    analysis_interval=3.0
-)
-```
+#### **2. AEGIS Security Engine**
+Enterprise security platform featuring:
+- Google ADK agent integration
+- Conversational security interface
+- Intelligent tool orchestration
+- Automated incident management
 
 ---
 
@@ -354,18 +392,6 @@ We welcome contributions from the security, AI, and computer vision communities:
 3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
 4. **Push** to the branch (`git push origin feature/amazing-feature`)
 5. **Open** a Pull Request
-
-### **Development Setup**
-```bash
-# Install development dependencies
-pip install -e ".[dev]"
-
-# Run tests
-pytest tests/
-
-# Format code
-black . && isort .
-```
 
 ---
 
