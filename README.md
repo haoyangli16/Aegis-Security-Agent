@@ -72,6 +72,7 @@
 - **Audit Trail**: Complete activity logging for compliance and forensics
 - **Dashboard Analytics**: Real-time security metrics and performance monitoring
 
+![flow-chart](pipeline/brief_pipeline.png)
 ---
 
 ## ⚙️ Technical Specifications
@@ -259,7 +260,6 @@ processor.process_video_stream(
 ```
 
 ---
-![flow-chart](pipeline/brief_pipeline.png)
 
 ## 📁 Repository Structure
 
