@@ -259,6 +259,7 @@ processor.process_video_stream(
 ```
 
 ---
+![flow-chart](pipeline/brief_pipeline.png)
 
 ## 📁 Repository Structure
 
