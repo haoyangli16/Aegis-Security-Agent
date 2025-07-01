@@ -31,6 +31,11 @@
   - **UI**: Custom detection boxes, real-time video analysis dashboard
 
 [![Watch the video](pipeline/web-cover.png)](https://www.youtube.com/watch?v=DMkqAjT5HVc)
+
+
+[![Watch the Examples](pipeline/more-example-cover.png)]
+(https://www.youtube.com/watch?v=lrIaPXFfpyI)
+
 - **Note**: If GPU resources become available on GKE, the full platform can be deployed immediately with all advanced features enabled.
 
 **Online Demo**: The simplified online web demo click [here](https://aegis-security-agent-533957102585.us-central1.run.app)
