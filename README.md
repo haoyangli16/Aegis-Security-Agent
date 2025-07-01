@@ -30,11 +30,12 @@
   - **Deployment**: FastAPI server on Cloud Run (when infrastructure supports)
   - **UI**: Custom detection boxes, real-time video analysis dashboard
 
-[![Watch the video](pipeline/web-cover.png)](https://www.youtube.com/watch?v=DMkqAjT5HVc)
 
+**👀 More Examples CLICK Here**👇
+[![Watch the Examples](pipeline/more-example-cover.png)](https://www.youtube.com/watch?v=lrIaPXFfpyI)
 
-[![Watch the Examples](pipeline/more-example-cover.png)]
-(https://www.youtube.com/watch?v=lrIaPXFfpyI)
+**👀 Check the Offical Demo Here**👇 [![Watch the video](pipeline/web-cover.png)](https://www.youtube.com/watch?v=DMkqAjT5HVc)
+
 
 - **Note**: If GPU resources become available on GKE, the full platform can be deployed immediately with all advanced features enabled.
 
@@ -116,8 +117,10 @@ git clone <repository-url>
 cd aegis_security_copilot
 ```
 
-### **Step 2: Install viclab Vision Framework**
+### **Step 2: Install VicLab Vision Framework**
 ```bash
+# **VicLab** is a repository I developed that integrates a wide range of computer vision tools. 
+# To better organize the AI vision modules, we have separated the ADK components and perception processing logic into two dedicated folders.
 cd viclab
 pip install -r requirements.txt
 pip install -e .
@@ -342,7 +345,7 @@ aegis_security_copilot/
 
 ### Component Overview
 
-#### **1. viclab Vision Framework**
+#### **1. VicLab Vision Framework**
 High-performance computer vision library providing:
 - Multi-modal video/image analysis
 - Real-time streaming processors
